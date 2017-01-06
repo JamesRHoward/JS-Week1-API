@@ -6,9 +6,9 @@ var displayDoctors = function(medicalIssue, doctors){
 
 $(document).ready(function() {
   var foundDoctors = new Search();
-    $('#medicalIssue').click(function() {
-      var medicalIssue = $('#doctor').val();
-      $('#doctor').val("");
-      foundDoctors.getDoctors(medicalIssue, doctors);
+    $('#doctor').click(function() {
+      var medicalIssue = $('#medicalIssue').val();
+      $('#medicalIssue').val("");
+      foundDoctors.getDoctors(medicalIssue, displayDoctors);
   });
 });
