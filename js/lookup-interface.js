@@ -1,7 +1,7 @@
 var Search = require('./../js/lookup.js').searchModule;
 
 var displayDoctors = function(medicalIssue, doctors){
-  $('.showDoctors').text("Doctors for" + medicalIssue + "is" + doctors);
+  $('.showDoctors').text("Doctors for " + medicalIssue + "is " + result.doctors);
 };
 
 $(document).ready(function() {
