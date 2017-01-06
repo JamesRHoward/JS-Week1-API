@@ -8,7 +8,7 @@ var buildProduction = utilities.env.production;
 var del = require('del');
 var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();
-var lib = require('browser-files')({
+var lib = require('bower-files')({
   "overrides":{
     "bootstrap":{
       "main":[
@@ -73,7 +73,7 @@ gulp.task('bowerCSS', function() {
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
-gulp.task('jsBuild'. ['jsBrowserify', 'jshint'], function() {
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
   browserSync.reload();
 });
 
